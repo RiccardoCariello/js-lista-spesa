@@ -25,17 +25,25 @@
               <h1 class="fs-4">Inserisci quali elementi aggiungere alla tua lista della spesa.</h1>
 
               <div class="mb-3 mx-4">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <label for="inputUtente" class="form-text">Prodotto da acquistare</label>
+                <input type="text" class="form-control" id="inputUtente" aria-describedby="inputlista">
+                <div id="emailHelp" class="form-text"><input class="btn btn-primary" type="button" value="Inserisci" onclick="aggiungi()"></div>
               </div>
 
 
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">An item</li>
+
+            <input class="btn btn-primary" type="button" value="Stampa" onclick="stampa()">
+            <ul class="list-group list-group-flush mx-4" id="lista">
+              
+              <li class="list-group-item">An item <button type="button" class="btn btn-primary btn-sm" id="cancel">Cancel</button></li>
+
+              <!--
               <li class="list-group-item">A second item</li>
               <li class="list-group-item">A third item</li>
+              -->
+
+
             </ul>
           </div>
 

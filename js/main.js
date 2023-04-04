@@ -28,4 +28,41 @@ while(i < listaSpesa.length ){
 */
 
 // bonus
+let listaSpesa = [];
+let newItem;
+
+
+//document.addEventListener("click", aggiungi);
+
+function aggiungi(){
+    
+    newItem = document.getElementById("inputUtente").value;
+    listaSpesa.push(newItem);
+    //console.log(listaSpesa);
+
+
+}
+
+function stampa(){
+    for(let i = 0 ; i < listaSpesa.length ; i++){
+    document.getElementById("lista").innerHTML += `
+        
+        <li class="list-group-item">${i+1}. ${listaSpesa[i]}  <button type="button" class="btn btn-primary btn-sm" id="cancel">Cancel</button></li>
+              
+        `;
+    }
+}
+
+function cancella(){
+
+    
+
+}
+
+
+
+
+
+
+
 
