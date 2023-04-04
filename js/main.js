@@ -29,14 +29,14 @@ while(i < listaSpesa.length ){
 
 // bonus
 let listaSpesa = [];
-let newItem;
+
 
 
 //document.addEventListener("click", aggiungi);
 
 function aggiungi(){
     
-    newItem = document.getElementById("inputUtente").value;
+    let newItem = document.getElementById("inputUtente").value;
     listaSpesa.push(newItem);
     //console.log(listaSpesa);
 
@@ -47,17 +47,25 @@ function stampa(){
     for(let i = 0 ; i < listaSpesa.length ; i++){
     document.getElementById("lista").innerHTML += `
         
-        <li class="list-group-item">${i+1}. ${listaSpesa[i]}  <button type="button" class="btn btn-primary btn-sm" id="cancel">Cancel</button></li>
+        <li class="list-group-item"><span>${i+1}</span>. <span>${listaSpesa[i]}</span>  <button type="button" class="btn btn-primary btn-sm" id="cancel" onclick="cancella(${i})">Cancel</button></li>
               
         `;
     }
 }
 
-function cancella(){
-
+function cancella(index){
+   
     
 
+    let arrayScarto = listaSpesa.splice(listaSpesa[index], 1);
+
+    console.log(`listaSpesa values: ${listaSpesa}`);
+    console.log(`variable x value: ${arrayScarto}`);
+
 }
+
+//come faccio a tenere il tutto aggiornato?
+
 
 
 
