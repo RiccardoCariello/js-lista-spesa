@@ -44,17 +44,22 @@ function aggiungi(){
 }
 
 function stampa(){
+    let output = "";
+    
     for(let i = 0 ; i < listaSpesa.length ; i++){
-    document.getElementById("lista").innerHTML += `
+        //document.getElementById("lista").innerHTML += `
+        output +=`
+                <li class="list-group-item"><span>${i+1}</span>. <span>${listaSpesa[i]}</span>  <button type="button" class="btn btn-primary btn-sm" id="cancel" onclick="cancella(${i})">Cancel</button></li>
+                    
+                `;
+
         
-        <li class="list-group-item"><span>${i+1}</span>. <span>${listaSpesa[i]}</span>  <button type="button" class="btn btn-primary btn-sm" id="cancel" onclick="cancella(${i})">Cancel</button></li>
-              
-        `;
     }
+    document.getElementById("lista").innerHTML = output;
 }
 
 function cancella(index){
-   
+    //index.preventDefault();
     
 
     let arrayScarto = listaSpesa.splice(listaSpesa[index], 1);
